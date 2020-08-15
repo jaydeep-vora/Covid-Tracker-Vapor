@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>
+India wins Covid-19
+</title>
+<style>
+table, td, th {
+  border: 0px solid #6c757d;
+  text-align: left;
+  font-family: verdana;
+}
+
+table {
+  border-collapse: collapse;
+  width: 45%;
+}
+
+tr:nth-child(even) {background: #6c757d1A}
+tr:nth-child(odd) {background: transparent}
+
+th#tableHeader, td {
+  font-size:15px;
+  padding: 4px;
+}
+
+td#deltasGreen {
+    font-size:12px;
+    color: green;
+}
+
+td#deltasRed{
+    font-size:12px;
+    color: red;
+}
+
+</style>
+</head>
+<body style="background-color:#171426; color:#FFFFFF;">
+<center>
+<h2 style="font-family: verdana;">India Covid-19 Case</h2>
+
+<h4 style="font-family: verdana; color: green;"> Last Updated on #(totalCase.lastupdatedtime)</h4>
+
+<table style="width:38%">
+    <tr>
+    <th id="tableHeader">Total Confirmed</th>
+    <th id="tableHeader">Total Active</th>
+    <th id="tableHeader">Total Recoverd</th>
+    <th id="tableHeader">Total Death</th>
+    </tr>
+    
+    <tr>
+    <td style="text-align:right">
+    <table align="right">
+    <tr>
+         #if(totalCase.deltaconfirmed != "0") {
+          <td id="deltasRed">
+              +#(totalCase.deltaconfirmed)
+          </td>
+         }
+    <td>
+        #(totalCase.confirmed)
+    </td>
+    </tr>
+    </table>
+    </td>
+    
+    <td style="text-align:right;"> #(totalCase.active)</td>
+    
+    <td style="text-align:right">
+    <table align="right">
+    <tr>
+         #if(totalCase.deltarecovered != "0") {
+          <td id="deltasGreen">
+              +#(totalCase.deltarecovered)
+          </td>
+         }
+    <td>
+        #(totalCase.recovered)
+    </td>
+    </tr>
+    </table>
+    </td>
+    
+    <td style="text-align:right; padding-right:20px;">
+    <table align="right">
+    <tr>
+         #if(totalCase.deltadeaths != "0") {
+          <td id="deltasRed">
+              +#(totalCase.deltadeaths)
+          </td>
+         }
+    <td>
+        #(totalCase.deaths)
+    </td>
+    </tr>
+    </table>
+    </td>
+    
+    </tr>
+</table>
+
+</br>
+</br>
+
+<table>
+  <tr>
+    <th id="tableHeader">State</th>
+    <th id="tableHeader">Confirmed</th>
+    <th id="tableHeader" style="text-align:right;">Active</th>
+    <th id="tableHeader" style="text-align:right;">Recoverd</th>
+    <th id="tableHeader" style="text-align:right; padding-right:20px;">Death</th>
+  </tr>
+  #for(data in stateData) {
+    <tr>
+      <td>#(data.state)</td>
+      <td style="text-align:right">
+      <table align="right">
+      <tr>
+           #if(data.deltaconfirmed != "0") {
+            <td id="deltasRed">
+                +#(data.deltaconfirmed)
+            </td>
+           }
+      <td>
+          #(data.confirmed)
+      </td>
+      </tr>
+      </table>
+      </td>
+      <td style="text-align:right; width:15%">#(data.active)</td>
+      
+      <td style="width:15%">
+      <table align="right">
+      <tr>
+           #if(data.deltarecovered != "0") {
+            <td id="deltasGreen">
+                +#(data.deltarecovered)
+            </td>
+           }
+      <td>
+          #(data.recovered)
+      </td>
+      </tr>
+      </table>
+      </td>
+      <td style="text-align:right; width:15%; padding-right:20px;">
+      <table align="right">
+      <tr>
+           #if(data.deltadeaths != "0") {
+            <td id="deltasRed">
+                +#(data.deltadeaths)
+            </td>
+           }
+      <td>
+          #(data.deaths)
+      </td>
+      </tr>
+      </table>
+      </td>
+    </tr>
+  }
+</table>
+</center>
+</body>
+</html>
+
+
+  
