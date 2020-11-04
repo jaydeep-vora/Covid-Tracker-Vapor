@@ -5260,6 +5260,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63BCABFE255327090050DB58 /* Vapor+flutter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Vapor+flutter.png"; sourceTree = "<group>"; };
+		63BCABFF255327090050DB58 /* covid_vapor_leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = covid_vapor_leaf.png; sourceTree = "<group>"; };
 		"Console::Command::Product" /* Command.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Command.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Console::Product" /* Console.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Console.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Logging::Product" /* Logging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -8001,9 +8003,11 @@
 			path = ".build/checkouts/swift-nio-ssl/Sources/NIOOpenSSL";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				63BCABFF255327090050DB58 /* covid_vapor_leaf.png */,
+				63BCABFE255327090050DB58 /* Vapor+flutter.png */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_17 /* Tests */,
@@ -8017,7 +8021,6 @@
 				OBJ_942 /* student.db */,
 				OBJ_943 /* web.Dockerfile */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_512 /* NIOTLSServer */ = {
@@ -10969,7 +10972,7 @@
 				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_888 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
